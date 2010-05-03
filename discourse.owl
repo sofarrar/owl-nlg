@@ -1,0 +1,477 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://purl.org/linguistics/gold/discourse.owl#"
+     xml:base="http://purl.org/linguistics/gold/discourse.owl"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="http://purl.org/linguistics/gold/discourse.owl">
+        <dc:contributor>Scott Farrar</dc:contributor>
+        <rdfs:comment>This ontology should be considered a discourse COPE.</rdfs:comment>
+        <owl:imports rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+        <owl:imports rdf:resource="http://www.w3.org/2000/01/rdf-schema#"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <owl:AnnotationProperty rdf:about="&dc;contributor"/>
+    <owl:AnnotationProperty rdf:about="&rdfs;comment"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/linguistics/gold/discourse.owl#alternation -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/linguistics/gold/discourse.owl#alternation">
+        <rdfs:comment>(Reese et al. 2007)</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/linguistics/gold/discourse.owl#coordinatingRelation"/>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/linguistics/gold/discourse.owl#nonVeridicalRelation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/linguistics/gold/discourse.owl#attribution -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/linguistics/gold/discourse.owl#attribution">
+        <rdfs:comment>(Reese et al. 2007)</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/linguistics/gold/discourse.owl#nonVeridicalRelation"/>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/linguistics/gold/discourse.owl#subordinatingRelation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/linguistics/gold/discourse.owl#background -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/linguistics/gold/discourse.owl#background">
+        <rdfs:comment>Background(a,b) holds when a constituent &#39;b&#39; provides information about the surrounding state of affairs in which the eventuality mentioned in &#39;a&#39;
+ occurs (Reese et al. 2007). This is often signaled by an aspectual shift:
+
+a. Also, about 585 workers were laid off at a stamping plant near Detroit.
+b. That plant normally employs 2,800 hourly workers.
+
+</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/linguistics/gold/discourse.owl#subordinatingRelation"/>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/linguistics/gold/discourse.owl#veridicalRelation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/linguistics/gold/discourse.owl#commentary -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/linguistics/gold/discourse.owl#commentary">
+        <rdfs:comment>(Reese et al. 2007)</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/linguistics/gold/discourse.owl#subordinatingRelation"/>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/linguistics/gold/discourse.owl#veridicalRelation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/linguistics/gold/discourse.owl#consequence -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/linguistics/gold/discourse.owl#consequence">
+        <rdfs:comment>(Reese et al. 2007)</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/linguistics/gold/discourse.owl#coordinatingRelation"/>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/linguistics/gold/discourse.owl#nonVeridicalRelation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/linguistics/gold/discourse.owl#continuation -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/linguistics/gold/discourse.owl#continuation">
+        <rdfs:comment>(Reese et al. 2007)</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/linguistics/gold/discourse.owl#coordinatingRelation"/>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/linguistics/gold/discourse.owl#veridicalRelation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/linguistics/gold/discourse.owl#contrast -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/linguistics/gold/discourse.owl#contrast">
+        <rdfs:comment>(Reese et al. 2007)</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/linguistics/gold/discourse.owl#coordinatingRelation"/>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/linguistics/gold/discourse.owl#veridicalRelation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/linguistics/gold/discourse.owl#coordinatingRelation -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/linguistics/gold/discourse.owl#coordinatingRelation">
+        <rdfs:comment>A relation where the temporal progression of events is the same as the linear order of the constituents. This kind of relation implies no dominance of one constituent over the other. The constituents are on equal functional footing (Asher and Vieu, 2005).</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/linguistics/gold/discourse.owl#discourseRelation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/linguistics/gold/discourse.owl#discourseRelation -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/linguistics/gold/discourse.owl#discourseRelation">
+        <rdfs:comment>A relation among units of discourse taken from Rhetorical Structure Theory (RST) (Mann and Thompson, 1987) and Segmented Discourse Representation Theory (SDRT) (Asher and Lascarides, 2003). Other terms include &#39;rhetorical relation&#39;.</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/linguistics/gold/discourse.owl#elaboration -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/linguistics/gold/discourse.owl#elaboration">
+        <rdfs:comment>(Reese et al. 2007)</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/linguistics/gold/discourse.owl#subordinatingRelation"/>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/linguistics/gold/discourse.owl#veridicalRelation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/linguistics/gold/discourse.owl#explanation -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/linguistics/gold/discourse.owl#explanation">
+        <rdfs:comment>(Reese et al. 2007)</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/linguistics/gold/discourse.owl#subordinatingRelation"/>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/linguistics/gold/discourse.owl#veridicalRelation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/linguistics/gold/discourse.owl#list -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/linguistics/gold/discourse.owl#list">
+        <rdfs:comment>not sure about the reference here; maybe the same as elaboration?</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/linguistics/gold/discourse.owl#coordinatingRelation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/linguistics/gold/discourse.owl#narration -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/linguistics/gold/discourse.owl#narration">
+        <rdfs:comment>(Reese et al. 2007)</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/linguistics/gold/discourse.owl#coordinatingRelation"/>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/linguistics/gold/discourse.owl#veridicalRelation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/linguistics/gold/discourse.owl#nonVeridicalRelation -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/linguistics/gold/discourse.owl#nonVeridicalRelation">
+        <rdfs:comment>A non-veridical relation fails to entail the content of at least one of 
+the arguments (Reese et al. 2007).</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/linguistics/gold/discourse.owl#discourseRelation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/linguistics/gold/discourse.owl#parallel -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/linguistics/gold/discourse.owl#parallel">
+        <rdfs:comment>(Reese et al. 2007)</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/linguistics/gold/discourse.owl#coordinatingRelation"/>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/linguistics/gold/discourse.owl#veridicalRelation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/linguistics/gold/discourse.owl#precondition -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/linguistics/gold/discourse.owl#precondition">
+        <rdfs:comment>(Reese et al. 2007)</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/linguistics/gold/discourse.owl#coordinatingRelation"/>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/linguistics/gold/discourse.owl#veridicalRelation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/linguistics/gold/discourse.owl#result -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/linguistics/gold/discourse.owl#result">
+        <rdfs:comment>(Reese et al. 2007)</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/linguistics/gold/discourse.owl#coordinatingRelation"/>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/linguistics/gold/discourse.owl#veridicalRelation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/linguistics/gold/discourse.owl#source -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/linguistics/gold/discourse.owl#source">
+        <rdfs:comment>(Reese et al. 2007)</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/linguistics/gold/discourse.owl#subordinatingRelation"/>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/linguistics/gold/discourse.owl#veridicalRelation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/linguistics/gold/discourse.owl#subordinatingRelation -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/linguistics/gold/discourse.owl#subordinatingRelation">
+        <rdfs:comment>A discourse relation implying a dominance of one constituent over the other. Subordinating relations break the temporal ordering of the constituents. The constituents are not on equal functional footing (Asher and Vieu, 2005).</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/linguistics/gold/discourse.owl#discourseRelation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/linguistics/gold/discourse.owl#veridicalRelation -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/linguistics/gold/discourse.owl#veridicalRelation">
+        <rdfs:comment>A veridical relation entails the content of both the arguments (Reese et al. 2007).</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/linguistics/gold/discourse.owl#discourseRelation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/1999/02/22-rdf-syntax-ns#_1 -->
+
+    <owl:ObjectProperty rdf:about="&rdf;_1">
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/1999/02/22-rdf-syntax-ns#_2 -->
+
+    <owl:ObjectProperty rdf:about="&rdf;_2">
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#topObjectProperty -->
+
+    <owl:ObjectProperty rdf:about="&owl;topObjectProperty"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/linguistics/gold/discourse.owl#AgeAscriptionMsg -->
+
+    <owl:Class rdf:about="http://purl.org/linguistics/gold/discourse.owl#AgeAscriptionMsg">
+        <rdfs:subClassOf rdf:resource="http://purl.org/linguistics/gold/discourse.owl#PropertyAscriptionMsg"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/linguistics/gold/discourse.owl#ClassAscriptionMsg -->
+
+    <owl:Class rdf:about="http://purl.org/linguistics/gold/discourse.owl#ClassAscriptionMsg">
+        <rdfs:subClassOf rdf:resource="http://purl.org/linguistics/gold/discourse.owl#Message"/>
+        <rdfs:comment>Indicates that something belongs to a particular type. 
+
+Some examples:
+
+IBM is a corporation.
+Horses are mammals.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/linguistics/gold/discourse.owl#ColorAscriptionMsg -->
+
+    <owl:Class rdf:about="http://purl.org/linguistics/gold/discourse.owl#ColorAscriptionMsg">
+        <rdfs:subClassOf rdf:resource="http://purl.org/linguistics/gold/discourse.owl#PropertyAscriptionMsg"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/linguistics/gold/discourse.owl#Discourse -->
+
+    <owl:Class rdf:about="http://purl.org/linguistics/gold/discourse.owl#Discourse">
+        <rdfs:subClassOf rdf:resource="http://purl.org/linguistics/gold/discourse.owl#InformationUnit"/>
+        <rdfs:comment>A coherent informational unit in communication. This could be called &#39;text unit&#39;, or in the context of NLG, &#39;document/text plan&#39;. A particular discourse type may have other discourse types as subunits.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/linguistics/gold/discourse.owl#ExistenceMsg -->
+
+    <owl:Class rdf:about="http://purl.org/linguistics/gold/discourse.owl#ExistenceMsg">
+        <rdfs:subClassOf rdf:resource="http://purl.org/linguistics/gold/discourse.owl#Message"/>
+        <rdfs:comment>Indicates the existence of something, usually with the verb BE.
+
+Some examples:
+
+There&#39;s this bar, see.
+There&#39;s a house on the corner.
+Aliens exist.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/linguistics/gold/discourse.owl#InformationUnit -->
+
+    <owl:Class rdf:about="http://purl.org/linguistics/gold/discourse.owl#InformationUnit"/>
+    
+
+
+    <!-- http://purl.org/linguistics/gold/discourse.owl#Message -->
+
+    <owl:Class rdf:about="http://purl.org/linguistics/gold/discourse.owl#Message">
+        <rdfs:subClassOf rdf:resource="http://purl.org/linguistics/gold/discourse.owl#InformationUnit"/>
+        <rdfs:comment>A significant predication in a discourse, which is the most granular informational unit found in natural language communication. At the level of syntax, messages correspond to clause or sub-clause units. The idea of a message is also similar to that of &#39;circumstance&#39; in Systemic Functional Grammar. Subclasses of &#39;message&#39; range from the very general, such as &#39;AttributiveMsg&#39;, to the domain specific, e.g., &#39;AutopartDefectMsg&#39;. Messages are similar to the idea of &#39;speech act discourse referents&#39; of Asher and Lascarides (2003), and also to the &#39;elementary discourse unit&#39; of Reese et al. (2007).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/linguistics/gold/discourse.owl#PropertyAscriptionMsg -->
+
+    <owl:Class rdf:about="http://purl.org/linguistics/gold/discourse.owl#PropertyAscriptionMsg">
+        <rdfs:subClassOf rdf:resource="http://purl.org/linguistics/gold/discourse.owl#Message"/>
+        <rdfs:comment>Indicates that an entity has a certain property.
+
+Some examples:
+
+The stove is hot.
+Sam is thirty years old.
+Mars is red.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/linguistics/gold/discourse.owl#SizeAscriptionMsg -->
+
+    <owl:Class rdf:about="http://purl.org/linguistics/gold/discourse.owl#SizeAscriptionMsg">
+        <rdfs:subClassOf rdf:resource="http://purl.org/linguistics/gold/discourse.owl#PropertyAscriptionMsg"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq -->
+
+    <owl:Class rdf:about="&rdf;Seq"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/linguistics/gold/discourse.owl#MyDiscourse1 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/linguistics/gold/discourse.owl#MyDiscourse1">
+        <rdf:type rdf:resource="http://purl.org/linguistics/gold/discourse.owl#Discourse"/>
+        <rdf:type rdf:resource="&rdf;Seq"/>
+        <rdfs:comment>Target discourse:
+        
+
+There is a dog. The dog is brown, and the dog is big.</rdfs:comment>
+        <rdf:_2 rdf:resource="http://purl.org/linguistics/gold/discourse.owl#MyDiscourse2"/>
+        <rdf:_1 rdf:resource="http://purl.org/linguistics/gold/discourse.owl#MyMsg1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/linguistics/gold/discourse.owl#MyDiscourse2 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/linguistics/gold/discourse.owl#MyDiscourse2">
+        <rdf:type rdf:resource="http://purl.org/linguistics/gold/discourse.owl#Discourse"/>
+        <rdfs:comment>Target discourse:
+
+The dog is brown, and the dog is big.</rdfs:comment>
+        <rdf:_1 rdf:resource="http://purl.org/linguistics/gold/discourse.owl#MyMsg2"/>
+        <rdf:_2 rdf:resource="http://purl.org/linguistics/gold/discourse.owl#MyMsg3"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/linguistics/gold/discourse.owl#MyMsg1 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/linguistics/gold/discourse.owl#MyMsg1">
+        <rdf:type rdf:resource="http://purl.org/linguistics/gold/discourse.owl#ExistenceMsg"/>
+        <rdfs:comment>Target 
+
+There is a dog.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/linguistics/gold/discourse.owl#MyMsg2 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/linguistics/gold/discourse.owl#MyMsg2">
+        <rdf:type rdf:resource="http://purl.org/linguistics/gold/discourse.owl#ColorAscriptionMsg"/>
+        <rdfs:comment>The dog is brown.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/linguistics/gold/discourse.owl#MyMsg3 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/linguistics/gold/discourse.owl#MyMsg3">
+        <rdf:type rdf:resource="http://purl.org/linguistics/gold/discourse.owl#SizeAscriptionMsg"/>
+        <rdfs:comment>Target:
+
+The dog is big.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://purl.org/linguistics/gold/discourse.owl#">
+        <rdfs:comment>Indicates that an entity has a certain property.
+
+Some examples:
+
+The stove is hot.
+Sam is thirty years old.
+Mars is red.</rdfs:comment>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.0.0.1451) http://owlapi.sourceforge.net -->
+
